@@ -19,7 +19,7 @@ class VerificationCodesController extends Controller
                 'data' => [
                     'code' => $code
                 ],
-            ],['aliyun']);
+            ]);
         } catch (\Overtrue\EasySms\Exceptions\NoGatewayAvailableException $exception) {
             $message = $exception->getException('aliyun')->getMessage();
             return $this->response->errorInternal($message ?: '短信发送异常');
