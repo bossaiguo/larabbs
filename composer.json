@@ -16,6 +16,7 @@
         "laravel/tinker": "~1.0",
         "mews/captcha": "~2.0",
         "mews/purifier": "~2.0",
+        "overtrue/easy-sms": "^1.1",
         "overtrue/laravel-lang": "~3.0",
         "overtrue/pinyin": "~3.0",
         "predis/predis": "~1.0",
@@ -66,7 +67,11 @@
     "config": {
         "preferred-install": "dist",
         "sort-packages": true,
-        "optimize-autoloader": true
+        "optimize-autoloader": true,
+        "platform": {
+            "ext-pcntl": "7.2",
+            "ext-posix": "7.2"
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable" : true
