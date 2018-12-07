@@ -14,7 +14,7 @@ class VerificationCodesController extends Controller
         $code = str_pad(random_int(1, 9999), 4, 0, STR_PAD_LEFT);
 
         try {
-            $result = $sms->send($phone, [
+            $result = $easySms->send($phone, [
                 'template' => 'SMS_149885301',
                 'data' => [
                     'code' => $code
