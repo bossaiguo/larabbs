@@ -13,7 +13,7 @@ $api->version('v1', [
         'limit' => config('api.rate_limits.sign.limit'),
         'expires' => config('api.rate_limits.sign.expires'),
     ], function($api) {
-        // 短信验证码
+        // 短信验证
         $api->post('verificationCodes', 'VerificationCodesController@store')
             ->name('api.verificationCodes.store');
         // 用户注册
@@ -41,6 +41,9 @@ $api->version('v1', [
             // 当前登录用户信息
             $api->get('user', 'UsersController@me')
                 ->name('api.user.show');
+            // 图片资源
+            $api->post('images', 'ImagesController@store')
+                ->name('api.images.store');
         });
     });
 });
